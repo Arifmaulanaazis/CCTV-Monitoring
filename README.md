@@ -41,7 +41,7 @@ To set up the application, follow these instructions:
 
 3. **Configure RTSP streams:**
 
-   RTSP stream URLs are stored in the `urls.json` file with the following format:
+   You will need to create and edit the `urls.json` file to specify your camera sources. This file should contain location names as keys and a list of camera URLs or indices as values. Here's an example format:
 
    ```json
    {
@@ -49,14 +49,17 @@ To set up the application, follow these instructions:
            "rtsp://username:password@ip_address:port/path"
        ],
        "Location 2": [
-           "rtsp://username:password@ip_address:port/path",
-           "rtsp://username:password@ip_address:port/path2"
+           "http://streaming_address:port/path",
+           "1"  // This can be a local camera index (e.g., 0, 1, 2) for USB webcams
        ],
        ...
    }
    ```
 
-   Edit the `urls.json` file to include your CCTV camera locations and their respective RTSP URLs.
+   **Note:** The `urls.json` file can contain various camera sources, such as:
+   - **RTSP URLs:** For IP cameras.
+   - **HTTP/HTTPS Streaming URLs:** For web streams.
+   - **Local Camera Indices:** Using numbers like `0`, `1`, `2`, etc., to reference built-in or USB webcams connected to your machine.
 
 4. **Run the application:**
 
