@@ -1,0 +1,4 @@
+PyQt5==5.15.9
+numpy>=1.24.0
+opencv-python>=4.5.0
+ultralytics>=8.0.0
