@@ -10,7 +10,8 @@ from PyQt5.QtCore import *
 
 from ultralytics import YOLO
 import logging
-
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 logging.getLogger('ultralytics').setLevel(logging.WARNING)
 
 
